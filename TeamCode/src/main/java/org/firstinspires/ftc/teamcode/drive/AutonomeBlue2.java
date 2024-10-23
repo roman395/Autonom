@@ -21,18 +21,18 @@ public class AutonomeBlue2 extends LinearOpMode {
         mec=new SampleMecanumDrive(hardwareMap);
 
 
-        TrajectorySequence e = mec.trajectorySequenceBuilder(new Pose2d(12, 24*1.8, Math.toRadians(0)))
-                .lineToLinearHeading(new Pose2d(48,24*1.8,Math.toRadians(0)))
+        TrajectorySequence e = mec.trajectorySequenceBuilder(new Pose2d(12, 60, Math.toRadians(0)))
+                .lineToLinearHeading(new Pose2d(48,60,Math.toRadians(45)))
 
                 .waitSeconds(1)
 
-                .strafeTo(new Vector2d(2.5*24,0))
+                .splineToLinearHeading(new Pose2d(36,24,Math.toRadians(0)),Math.toRadians(-45))
 
                 .waitSeconds(0.5)
-                .splineToLinearHeading(new Pose2d(60,24),Math.toRadians(-40))
+                .splineTo(new Vector2d(48,60),Math.toRadians(45))
 
                 .waitSeconds(1)
-                .lineToLinearHeading(new Pose2d(24+24+24,-24,Math.toRadians(0)))
+                .lineToLinearHeading(new Pose2d(24,12,Math.toRadians(0)))
 
                 .build();
 

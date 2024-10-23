@@ -21,7 +21,7 @@ public class AutonomeRed1 extends LinearOpMode {
         mec=new SampleMecanumDrive(hardwareMap);
 
 
-        TrajectorySequence e = mec.trajectorySequenceBuilder(new Pose2d(-12,-58,Math.toRadians(180)))
+        TrajectorySequence e = mec.trajectorySequenceBuilder(new Pose2d(-12, -60, Math.toRadians(180)))
 
                 .lineToLinearHeading(new Pose2d(-60,-40,Math.toRadians(-130)))
                 .waitSeconds(1)
@@ -29,8 +29,9 @@ public class AutonomeRed1 extends LinearOpMode {
 
                 .waitSeconds(0.5)
                 .turn(Math.toRadians(140))
+
                 .waitSeconds(1)
-                .splineToLinearHeading(new Pose2d(0,12,Math.toRadians(180)),Math.toRadians(0))
+                .splineToLinearHeading(new Pose2d(-24,-12,Math.toRadians(-180)),Math.toRadians(0))
 
 
                 .build();

@@ -21,18 +21,18 @@ public class AutonomeRed2 extends LinearOpMode {
         mec=new SampleMecanumDrive(hardwareMap);
 
 
-        TrajectorySequence e = mec.trajectorySequenceBuilder(new Pose2d(12, -60, Math.toRadians(0)))
-                .lineToLinearHeading(new Pose2d(30,60,Math.toRadians(-45)))
+        TrajectorySequence e = mec.trajectorySequenceBuilder(new Pose2d(-12, -58, Math.toRadians(180)))
+                .lineToLinearHeading(new Pose2d(-48,-48,Math.toRadians(25+180)))
 
                 .waitSeconds(1)
 
-                .splineToLinearHeading(new Pose2d(36,-24,Math.toRadians(0)),Math.toRadians(45))
+                .splineToLinearHeading(new Pose2d(-36,-6,Math.toRadians(180)),Math.toRadians(180))
 
                 .waitSeconds(0.5)
-                .splineTo(new Vector2d(30,-60),Math.toRadians(-45))
+                .splineTo(new Vector2d(-48,-40),Math.toRadians(25+180))
 
                 .waitSeconds(1)
-                .lineToLinearHeading(new Pose2d(24,-12,Math.toRadians(0)))
+                .lineToLinearHeading(new Pose2d(-34,12,Math.toRadians(180)))
 
                 .build();
 
@@ -40,7 +40,7 @@ public class AutonomeRed2 extends LinearOpMode {
         waitForStart();
         mec.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         mec.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        mec.setPoseEstimate(new Pose2d(12,-58));
+        mec.setPoseEstimate(new Pose2d(-12,-58,Math.toRadians(180)));
         mec.followTrajectorySequence(e);
 
 

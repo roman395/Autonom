@@ -26,13 +26,13 @@ public class AutonomeRed2 extends LinearOpMode {
 
                 .waitSeconds(1)
 
-                .splineToLinearHeading(new Pose2d(-36,-6,Math.toRadians(180)),Math.toRadians(180))
+                .splineToLinearHeading(new Pose2d(-36,-8,Math.toRadians(180)),Math.toRadians(180))
 
                 .waitSeconds(0.5)
                 .splineTo(new Vector2d(-48,-40),Math.toRadians(25+180))
 
                 .waitSeconds(1)
-                .lineToLinearHeading(new Pose2d(-34,12,Math.toRadians(180)))
+                .lineToLinearHeading(new Pose2d(-40,12,Math.toRadians(180)))
 
                 .build();
 

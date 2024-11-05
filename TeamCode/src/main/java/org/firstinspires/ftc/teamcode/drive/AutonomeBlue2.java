@@ -26,13 +26,13 @@ public class AutonomeBlue2 extends LinearOpMode {
 
                 .waitSeconds(1)
 
-                .splineToLinearHeading(new Pose2d(36,6,Math.toRadians(0)),Math.toRadians(-45))
+                .splineToLinearHeading(new Pose2d(39,12,Math.toRadians(0)),Math.toRadians(-45))
 
                 .waitSeconds(0.5)
                 .splineTo(new Vector2d(48,40),Math.toRadians(45))
 
                 .waitSeconds(1)
-                .lineToLinearHeading(new Pose2d(34,-12,Math.toRadians(0)))
+                .lineToLinearHeading(new Pose2d(42,-12,Math.toRadians(0)))
 
                 .build();
 
